@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Developer Skills</title>
+    <link rel="stylesheet" href="service.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <div class="background">
+        <div class="service-container">
+            <h1 class="title">Our Services</h1>
+            
+            <div class="filter">
+                <button data-filter="all">All</button>
+                <button data-filter="frontend">Frontend</button>
+                <button data-filter="backend">Backend</button>
+                <button data-filter="database">Database</button>
+                <button data-filter="other">Other</button>
+            </div>
+
+            <div class="services">
+                <div class="service" data-category="frontend">
+                    <h2>Frontend Development</h2>
+                    <p>Creating visually appealing and responsive websites using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="service" data-category="backend">
+                    <h2>Backend Development</h2>
+                    <p>Building robust server-side applications with technologies like Node.js, Python, and databases.</p>
+                </div>
+                <div class="service" data-category="database">
+                    <h2>Database Management</h2>
+                    <p>Managing and optimizing databases with MySQL, MongoDB, and PostgreSQL.</p>
+                </div>
+                <div class="service" data-category="other">
+                    <h2>Other Services</h2>
+                    <p>Providing API integrations, cloud services, and full-stack development solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="service.js"></script>
+</body>
+</html>

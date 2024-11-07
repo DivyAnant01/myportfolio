@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(18, 18, 62, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+  
+  }
+  
+  .left {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    color: #9c97f1;
+    border-bottom: 2px solid #9c97f1;
+  }
+  
+  .container-main {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f0f4f8; */
+    background: linear-gradient(135deg, rgba(0, 0, 33, 0.8), rgba(0, 0, 0, 0.8));
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+
+  .contact-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .contact-info {
+    padding: 40px;
+    flex: 1;
+    background-color: #282a36;
+    color: #f8f8f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contact-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .info-list {
+    list-style: none;
+    margin-bottom: 30px;
+  }
+  
+  .info-list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .info-list a {
+    color: #50fa7b;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .info-list a:hover {
+    color: #bd93f9;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.1);
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(44, 44, 118, 0.8), rgba(0, 0, 0, 0.8));
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #6272a4;
+    border-radius: 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ff79c6;
+  }
+  
+  button {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, rgb(101 101 215 / 80%), rgb(222 203 203 / 80%));
+    border: none;
+    color: #282a36;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff79c6;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-info, .contact-form {
+      padding: 20px;
+    }
+  }
+  
+
+
+  
+@media (max-width: 1200px) {
+  .firstsection {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .firstsection>div {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .footer {
+      flex-direction: column;
+      padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .leftsection {
+      font-size: 1.2rem;
+  }
+
+  .firstsection>div {
+      width: 100%;
+  }
+
+  nav ul li {
+      margin: 0 10px;
+  }
+
+  main hr {
+      margin: 25px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .firstsection {
+      margin: 40px 0;
+  }
+
+  .secondsection {
+      height: auto;
+  }
+
+  .footer {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  footer>div {
+      width: auto;
+      text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .leftsection .btn {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .purple,
+  .text-grey,
+  .vertical-title,
+  .vertical-desc {
+      font-size: 0.9rem;
+  }
+
+  .secondsection h1 {
+      font-size: 1.5rem;
+  }
+
+  .image-top {
+      width: 20px;
+  }
+}
