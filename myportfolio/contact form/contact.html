@@ -21,11 +21,11 @@
             <div class="left">Anant's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about/about.html">About</a></li>
-                    <li><a href="/">Services</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="../services/service.html">Services</a></li>
                     <li><a href="/">Projects</a></li>
-                    <li><a href="/contact form/contact.html">Contact me</a></li>
+                    <li><a href="../contact form/contact.html">Contact me</a></li>
                 </ul>
             </div>
         </nav>
@@ -47,25 +47,33 @@
                     </ul>
                     <div class="social-icons">
                         <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
-                        <a href="#" class="social-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                        <a href="https://www.linkedin.com/in/divy-anant-varshney-50b1851b3/" class="social-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
                         <a href="https://github.com/DivyAnant01" class="social-icon"><img src="github-icon.png"
                                 alt="GitHub"></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms access key -->
+                        <input type="hidden" name="access_key" value="3606039b-3f50-4f2f-9cb8-7b35b9cd85c1">
+
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <input type="number" id="number" name="number" placeholder="Your Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
                         </div>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
+
             </div>
         </section>
     </div>

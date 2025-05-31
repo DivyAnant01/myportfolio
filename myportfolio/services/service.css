@@ -1,143 +1,186 @@
-/* Global Styles */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    font-family: 'Helvetica', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0b0b25;
-    color: #fff;
+body,
+html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2c2c76, #000);
+  color: #f4f4f4;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.background {
-    width: 100%;
-    height: 100%;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #1a1a40, #000022);
+/* Navbar Fixed */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(18, 18, 62, 0.95);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 1000;
 }
 
-.service-container {
-    max-width: 1200px;
-    width: 100%;
-    text-align: center;
+.left {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f4f4f4;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  height: 100%;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #9c97f1;
+  border-bottom: 2px solid #9c97f1;
+}
+
+/* Main content starts below navbar */
+main {
+  padding-top: 80px; /* More than nav height for spacing */
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+
+/* Service Section */
+.service-section {
+  text-align: center;
+  padding: 0 20px;
 }
 
 .title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-    color: #fff;
-    letter-spacing: 2px;
-    background: linear-gradient(90deg, #ff007f, #7f00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: transparent;
+  background: linear-gradient(90deg, #ff007f, #7f00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
+  user-select: none;
 }
 
-/* Service Cards */
+/* Filter Buttons */
+.filter {
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+.filter button {
+  padding: 10px 22px;
+  margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.filter button:hover,
+.filter button.active {
+  background-color: #9c97f1;
+  color: #120d7e;
+}
+
+/* Services Cards in grid */
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    perspective: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
+/* Each card style */
 .service-card {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transition: transform 1s ease;
-    perspective: 1000px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 30px 20px;
+  cursor: default;
+  transition: transform 0.3s ease;
+  user-select: none;
 }
 
-.service-card:hover .card-inner {
-    transform: rotateY(180deg);
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(156, 151, 241, 0.6);
 }
 
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+.service-card h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #9c97f1;
+  font-size: 1.7rem;
 }
 
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+.service-card p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #ddd;
 }
 
-.card-front {
-    background: rgba(0, 0, 50, 0.8);
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    transform: rotateY(0deg);
+/* Category colors */
+.frontend h2 {
+  color: #ff66cc;
 }
 
-.card-back {
-    background: rgba(50, 0, 100, 0.9);
-    font-size: 1.1rem;
-    text-align: center;
-    color: #eee;
-    transform: rotateY(180deg);
+.backend h2 {
+  color: #33ccff;
 }
 
-/* Individual Service Card Colors */
-.frontend .card-front {
-    background: linear-gradient(45deg, #ff007f, #ff66cc);
+.database h2 {
+  color: #66ff99;
 }
 
-.backend .card-front {
-    background: linear-gradient(45deg, #0099ff, #33ccff);
+.others h2 {
+  color: #ffcc33;
 }
 
-.database .card-front {
-    background: linear-gradient(45deg, #33cc99, #66ff99);
-}
+/* Responsive for smaller devices */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
 
-.others .card-front {
-    background: linear-gradient(45deg, #ff9900, #ffcc33);
-}
+  nav ul li {
+    margin: 0 10px;
+  }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .service-card {
-        height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 2rem;
-    }
-
-    .service-card {
-        height: 250px;
-    }
+  nav ul li a {
+    font-size: 0.9rem;
+  }
 }

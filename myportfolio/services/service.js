@@ -1,16 +1,21 @@
-// GSAP Animations
-window.onload = () => {
-    gsap.from(".title", { opacity: 0, y: -50, duration: 1 });
+const filterButtons = document.querySelectorAll(".filter button");
+const serviceCards = document.querySelectorAll(".service-card");
 
-    gsap.from(".service-card", {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.3,
-        scrollTrigger: {
-            trigger: ".services",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        }
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    // Add active class to clicked button
+    button.classList.add("active");
+
+    const filter = button.getAttribute("data-filter");
+
+    serviceCards.forEach(card => {
+      if (filter === "all" || card.dataset.category === filter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
     });
-};
+  });
+});

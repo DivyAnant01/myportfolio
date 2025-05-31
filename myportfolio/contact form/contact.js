@@ -1,15 +1,19 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.querySelector("form").addEventListener("submit", async function (e) {
     e.preventDefault();
-  
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-  
-    if (name && email && message) {
-      alert('Message sent successfully!');
-      document.getElementById('contactForm').reset();
+
+    const formData = new FormData(this);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        alert("Message sent successfully!");
+        this.reset(); // form clear kar dega
     } else {
-      alert('Please fill out all fields.');
+        alert("Something went wrong. Please try again!");
     }
-  });
-  
+});
