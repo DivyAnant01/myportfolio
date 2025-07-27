@@ -121,6 +121,21 @@
     <img id="modalImg" src="" alt="Full Certificate" />
   </div>
 
+  <div class="wave-bg" id="wave"></div>
+
+  <div class="content">
+    Move your mouse... 💻 Wave effect follows!
+  </div>
+
+
   <script src="Certificates.js"></script>
+  <script>
+    const wave = document.getElementById("wave");
+    document.addEventListener("mousemove", (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      wave.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.15), transparent 40%)`;
+    });
+  </script>
 </body>
 </html>
