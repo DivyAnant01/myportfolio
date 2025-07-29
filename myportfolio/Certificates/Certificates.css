@@ -6,24 +6,23 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  /* background: linear-gradient(135deg, rgba(44, 44, 118, 0.8), rgba(0, 0, 0, 0.8)); */
-    background: linear-gradient(135deg, #2c2c76, #000);
-
+  background: linear-gradient(135deg, #2c2c76, #000);
   color: #f4f4f4;
   overflow-x: hidden;
 }
-.wave-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 40%);
-      pointer-events: none;
-      z-index: 1;
-      transition: background-position 0.05s;
-    }
 
-/* Navbar (original style as you provided) */
+.wave-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+  transition: background-position 0.05s;
+}
+
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -61,7 +60,7 @@ nav ul li a:hover {
   border-bottom: 2px solid #9c97f1;
 }
 
-/* Section */
+/* Certificates Section */
 .certificates-section {
   padding: 60px 20px;
   text-align: center;

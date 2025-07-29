@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="../developer.png">
-
+  <link rel="icon" type="image/png" href="../developer.png">
   <title>My Certificates</title>
   <link rel="stylesheet" href="Certificates.css" />
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
@@ -30,91 +29,7 @@
 
   <section class="certificates-section">
     <h2 class="title">My Achievements & Certificates</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="certs/cert1.JPG" alt="Certificate 1" />
-          </div>
-          <div class="card-back">
-            <p>Android Application Development</p>
-            <button class="view-btn" data-img="certs/cert1.jpg">View</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="certs/cert2.JPG" alt="Certificate 2" />
-          </div>
-          <div class="card-back">
-            <p>AR/VR Development</p>
-            <button class="view-btn" data-img="certs/cert2.jpg">View</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="certs/cert3.JPG" alt="Certificate 2" />
-          </div>
-          <div class="card-back">
-            <p>Paloalto Internship</p>
-            <button class="view-btn" data-img="certs/cert3.jpg">View</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="certs/cert4.JPG" alt="Certificate 2" />
-          </div>
-          <div class="card-back">
-            <p>Java Business</p>
-            <button class="view-btn" data-img="certs/cert4.jpg">View</button>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="certs/cert5.JPG" alt="Certificate 2" />
-          </div>
-          <div class="card-back">
-            <p>1 Month Internship Complition Certificate</p>
-            <button class="view-btn" data-img="certs/cert5.jpg">View</button>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="certs/cert6.JPG" alt="Certificate 2" />
-          </div>
-          <div class="card-back">
-            <p>Offer Letter</p>
-            <button class="view-btn" data-img="certs/cert6.jpg">View</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="certs/cert7.JPG" alt="Certificate 2" />
-          </div>
-          <div class="card-back">
-            <p>Offer Letter</p>
-            <button class="view-btn" data-img="certs/cert7.jpg">View</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add more cards as needed -->
-    </div>
+    <div class="grid" id="certGrid"></div>
   </section>
 
   <!-- Modal -->
@@ -124,11 +39,6 @@
   </div>
 
   <div class="wave-bg" id="wave"></div>
-
-  <div class="content">
-    <!-- Move your mouse... 💻 Wave effect follows! -->
-  </div>
-
 
   <script src="Certificates.js"></script>
   <script>
