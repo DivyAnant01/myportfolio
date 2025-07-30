@@ -15,7 +15,8 @@
   <header>
     <nav>
       <div class="left">Anant's Portfolio</div>
-      <div class="right">
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+      <div class="right" id="navRight">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about/about.html">About</a></li>
@@ -47,6 +48,12 @@
       const x = e.clientX;
       const y = e.clientY;
       wave.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.15), transparent 40%)`;
+    });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navRight = document.getElementById("navRight");
+    menuToggle.addEventListener("click", () => {
+      navRight.classList.toggle("active");
     });
   </script>
 </body>

@@ -1,5 +1,3 @@
-// Certificates.js
-
 // Certificate data array
 const certificates = [
   { img: "certs/cert1.JPG", title: "Android Application Development" },
@@ -10,7 +8,6 @@ const certificates = [
   { img: "certs/cert6.JPG", title: "Offer Letter" },
   { img: "certs/cert7.JPG", title: "Offer Letter" },
   { img: "certs/cert8.JPG", title: "Java Programmers" },
-  // Add more if needed
 ];
 
 // Get container
@@ -39,7 +36,6 @@ const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
 const closeBtn = document.getElementById("closeBtn");
 
-// Delegate event for dynamic buttons
 grid.addEventListener("click", e => {
   if (e.target.classList.contains("view-btn")) {
     const imgSrc = e.target.getAttribute("data-img");

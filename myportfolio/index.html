@@ -1,132 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Divy Anant</title>
-      <link rel="icon" type="image/png" href="developer.png">
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divy Anant</title>
+  <link rel="icon" type="image/png" href="developer.png">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
 
 <!-- Header/Navbar -->
 <header>
-    <nav>
-        <div class="left">Anant's Portfolio</div>
-        <div class="right">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about/about.html">About</a></li>
-                <li><a href="services/service.html">Services</a></li>
-                <li><a href="Certificates/Certificates.html">Certificates</a></li>
-                <li><a href="contact form/contact.html">Contact me</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="left">Anant's Portfolio</div>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <div class="right" id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about/about.html">About</a></li>
+        <li><a href="services/service.html">Services</a></li>
+        <li><a href="Certificates/Certificates.html">Certificates</a></li>
+        <li><a href="contact form/contact.html">Contact me</a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
 
 <!-- Hero Section -->
 <main>
-    <section class="firstsection">
-        <div class="leftsection">
-            Hi, My name is <span class="purple">Divy Anant</span>
-            <div>and I am a passionate</div>
-            <span id="element"></span>
-            <div class="buttons">
-                <a href="DivyAnant_Resume.pdf" download class="btn">Download Resume</a>
-                <a href="http://github.com/DivyAnant01" target="_blank" class="btn">Visit GitHub</a>
-            </div>
-        </div>
-        <div class="rightsection">
-            <img src="bg.png" alt="Developer Image">
-        </div>
-    </section>
+  <section class="firstsection">
+    <div class="leftsection">
+      Hi, My name is <span class="purple">Divy Anant</span>
+      <div>and I am a passionate</div>
+      <span id="element"></span>
+      <div class="buttons">
+        <button id="resumeBtn" class="btn">Download Resume</button>
+        <button id="githubBtn" class="btn">Visit GitHub</button>
+      </div>
+    </div>
+    <div class="rightsection">
+      <img src="bg.png" alt="Developer Image">
+    </div>
+  </section>
 
-    <hr>
+  <hr>
 
-    <!-- Projects & Internships -->
-    <section class="secondsection">
-        <span class="text-grey">What I have done so far</span>
-        <h1>Projects & Internships</h1>
-        <div class="box">
-            <div class="vertical">
-                <img src="developer.png" class="image-top" alt="">
-                <div class="vertical-title">MERN Stack Developer Intern (May–June 2025)</div>
-                <div class="vertical-desc">Completed full-stack internship at Codec Technologies. Built responsive web apps using MongoDB, Express.js, React.js, Node.js. Certified by AICTE.</div>
-            </div>
-            <div class="vertical">
-                <img src="developer.png" class="image-top" alt="">
-                <div class="vertical-title">Wanderlust – Rental Web App (2025)</div>
-                <div class="vertical-desc">Full-stack property rental platform with MERN and Cloudinary. Live: <a href="https://wanderlust-visit.onrender.com" target="_blank">Visit</a>.</div>
-            </div>
-            <div class="vertical">
-                <img src="developer.png" class="image-top" alt="">
-                <div class="vertical-title">Portfolio Website (2025)</div>
-                <div class="vertical-desc">Built with HTML, CSS, JS. GSAP animations for smooth and engaging UI.</div>
-            </div>
-            <div class="vertical">
-                <img src="developer.png" class="image-top" alt="">
-                <div class="vertical-title">Android App Dev (Winter 2024)</div>
-                <div class="vertical-desc">Completed training with IIIT Allahabad. Gained practical mobile UI/UX experience.</div>
-            </div>
-            <div class="vertical">
-                <img src="developer.png" class="image-top" alt="">
-                <div class="vertical-title">Java Business App Training (June 2025)</div>
-                <div class="vertical-desc">Scored 85% in IIT Bombay SINE training. Built Java-based business apps.</div>
-            </div>
-            <div class="vertical">
-                <img src="developer.png" class="image-top" alt="">
-                <div class="vertical-title">AR/VR Dev Training (2023)</div>
-                <div class="vertical-desc">Trained at iHUB IIT Roorkee. Developed immersive AR/VR applications.</div>
-            </div>
-        </div>
-    </section>
+  <!-- Projects & Internships Section -->
+  <section class="secondsection">
+    <span class="text-grey">What I have done so far</span>
+    <h1>Projects & Internships</h1>
+    <div class="box">
+      <div class="vertical">
+        <div class="image-top"><i class="fas fa-laptop-code"></i></div>
+        <div class="vertical-title">MERN Stack Developer Intern (May–June 2025)</div>
+        <div class="vertical-desc">Completed full-stack internship at Codec Technologies. Built responsive web apps using MongoDB, Express.js, React.js, Node.js. Certified by AICTE.</div>
+      </div>
+      <div class="vertical">
+        <div class="image-top"><i class="fas fa-home"></i></div>
+        <div class="vertical-title">Wanderlust – Rental Web App (2025)</div>
+        <div class="vertical-desc">Full-stack property rental platform with MERN and Cloudinary. Live: <a href="https://wanderlust-visit.onrender.com" target="_blank">Visit</a>.</div>
+      </div>
+      <div class="vertical">
+        <div class="image-top"><i class="fas fa-globe"></i></div>
+        <div class="vertical-title">Portfolio Website (2025)</div>
+        <div class="vertical-desc">Built with HTML, CSS, JS. GSAP animations for smooth and engaging UI.</div>
+      </div>
+      <div class="vertical">
+        <div class="image-top"><i class="fas fa-mobile-alt"></i></div>
+        <div class="vertical-title">Android App Dev (Winter 2024)</div>
+        <div class="vertical-desc">Completed training with IIIT Allahabad. Gained practical mobile UI/UX experience.</div>
+      </div>
+      <div class="vertical">
+        <div class="image-top"><i class="fas fa-briefcase"></i></div>
+        <div class="vertical-title">Java Business App Training (June 2025)</div>
+        <div class="vertical-desc">Scored 85% in IIT Bombay SINE training. Built Java-based business apps.</div>
+      </div>
+      <div class="vertical">
+        <div class="image-top"><i class="fas fa-vr-cardboard"></i></div>
+        <div class="vertical-title">AR/VR Dev Training (2023)</div>
+        <div class="vertical-desc">Trained at iHUB IIT Roorkee. Developed immersive AR/VR applications.</div>
+      </div>
+    </div>
+  </section>
 </main>
-
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="footer-content">
-        <h2>Did You Know?</h2>
-        <div class="knowledge">
-            <p>Java is used by 3 billion devices worldwide!</p>
-            <p>Flutter enables fast UI development across multiple platforms.</p>
-            <p>GSAP optimizes animations for performance and engagement.</p>
-        </div>
-        <div class="social-icons">
-            <a href="http://github.com/DivyAnant01" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/divy-anant-varshney-50b1851b3" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
+  <div class="footer-content">
+    <h2>Did You Know?</h2>
+    <div class="knowledge">
+      <p>Java is used by 3 billion devices worldwide!</p>
+      <p>Flutter enables fast UI development across multiple platforms.</p>
+      <p>GSAP optimizes animations for performance and engagement.</p>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> Divy Anant. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="http://github.com/DivyAnant01" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/divy-anant-varshney-50b1851b3" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="currentYear"></span> Divy Anant. All rights reserved.</p>
+  </div>
 </footer>
 
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script>
-    gsap.from(".footer-content h2", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
-    gsap.from(".knowledge p", { duration: 1, y: 30, opacity: 0, stagger: 0.3, ease: "power2.out" });
-    gsap.from(".social-icons a", { duration: 1, scale: 0, opacity: 0, stagger: 0.2, ease: "back.out(1.7)" });
-
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-</script>
-
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
-    var typed = new Typed('#element', {
-        strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor', 'Logo Designer.'],
-        typeSpeed: 50,
-    });
+  // Typed Animation
+  var typed = new Typed('#element', {
+    strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor', 'Logo Designer.'],
+    typeSpeed: 50,
+  });
+
+  // GSAP Footer Animations
+  gsap.from(".footer-content h2", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+  gsap.from(".knowledge p", { duration: 1, y: 30, opacity: 0, stagger: 0.3, ease: "power2.out" });
+  gsap.from(".social-icons a", { duration: 1, scale: 0, opacity: 0, stagger: 0.2, ease: "back.out(1.7)" });
+
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+  // Resume Button
+  document.getElementById('resumeBtn').addEventListener('click', function () {
+    const fileId = '1rWp-DSjYF3Q6BWRumIgL5X9TcWs4pc0V';
+    const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.download = 'resume.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+
+  // GitHub Button
+  document.getElementById('githubBtn').addEventListener('click', function () {
+    window.open('https://github.com/DivyAnant01', '_blank');
+  });
+
+  // Hamburger Toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('nav-menu').classList.toggle('active');
+  });
 </script>
 
-<script src="app.js"></script>
 </body>
 </html>

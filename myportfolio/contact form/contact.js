@@ -1,25 +1,32 @@
 const card = document.getElementById('contactCard');
 const tapIcon = document.querySelector('.tap-icon');
+const menuToggle = document.getElementById('menuToggle');
+const navRight = document.getElementById('navRight');
 
 // Expand card on click
 card.addEventListener('click', function () {
   if (!card.classList.contains('expanded')) {
     card.classList.remove('collapsed');
     card.classList.add('expanded');
-    tapIcon.style.display = 'none'; // Hide tap icon
+    tapIcon.style.display = 'none';
   }
 });
 
-// Collapse when clicking outside
+// Collapse card when clicking outside
 document.addEventListener('click', function (e) {
   if (!card.contains(e.target) && card.classList.contains('expanded')) {
     card.classList.add('collapsed');
     card.classList.remove('expanded');
-    tapIcon.style.display = 'block'; // Show tap icon again
+    tapIcon.style.display = 'block';
   }
 });
 
-// Form submission handler
+// Hamburger toggle
+menuToggle.addEventListener('click', () => {
+  navRight.classList.toggle('active');
+});
+
+// Form submission
 document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
   const formData = new FormData(this);

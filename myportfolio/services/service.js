@@ -1,13 +1,11 @@
 const filterButtons = document.querySelectorAll(".filter button");
 const serviceCards = document.querySelectorAll(".service-card");
 
+// Filter logic
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
-    // Remove active class from all buttons
     filterButtons.forEach(btn => btn.classList.remove("active"));
-    // Add active class to clicked button
     button.classList.add("active");
-
     const filter = button.getAttribute("data-filter");
 
     serviceCards.forEach(card => {
@@ -18,4 +16,9 @@ filterButtons.forEach(button => {
       }
     });
   });
+});
+
+// Hamburger toggle
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  document.getElementById('nav-menu').classList.toggle('active');
 });

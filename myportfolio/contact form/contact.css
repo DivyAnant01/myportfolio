@@ -11,40 +11,48 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: rgba(18, 18, 62, 0.9);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(18, 18, 62, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .left {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-    list-style: none;
-    margin: 0 15px;
+  list-style: none;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #f1f1f1;
-    transition: color 0.3s ease;
-    padding: 5px 10px;
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+  padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    color: #9c97f1;
-    border-bottom: 2px solid #9c97f1;
+  color: #9c97f1;
+  border-bottom: 2px solid #9c97f1;
 }
 
 .container-main {
@@ -185,7 +193,6 @@ button:hover {
   background: #ff79c6;
 }
 
-/* Glow Border */
 .glowing-border {
   animation: glow 2s infinite alternate;
   border: 2px solid transparent;
@@ -202,7 +209,6 @@ button:hover {
   }
 }
 
-/* Tap Icon Glow */
 .tap-icon {
   position: absolute;
   top: 50%;
@@ -219,8 +225,35 @@ button:hover {
   100% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
 }
 
-/* Responsive */
+/* Responsive & Hamburger */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(18, 18, 62, 0.95);
+  }
+
+  .right.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
   .contact-card.expanded {
     flex-direction: column;
   }
